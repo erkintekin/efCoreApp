@@ -4,8 +4,12 @@
     ViewData["Title"] = "Öğrenci Düzenleme";
 }
 
+
+
 <form asp-action="Edit" asp-controller="Ogrenci" method="post">
 
+    <div asp-validation-summary="All" class="text-danger"></div>
+    <input type="hidden" asp-for="OgrenciId">
     <div class="mb-3">
         <label asp-for="OgrenciAd" class="form-label">Öğrenci Adı</label>
         <input asp-for="OgrenciAd" class="form-control">

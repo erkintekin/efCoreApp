@@ -55,10 +55,10 @@ namespace efCoreApp.Controllers
         {
             Ogrenci? selectedStudent = await _context.Ogrenciler.FirstOrDefaultAsync(s => s.OgrenciId == id);
 
-            // if (selectedStudent == null)
-            // {
-            //     return NotFound(); // Eğer öğrenci bulunamazsa 404 hatası döndür
-            // }
+            if (selectedStudent == null)
+            {
+                return NotFound();
+            }
 
             return View(selectedStudent);
 
@@ -69,20 +69,12 @@ namespace efCoreApp.Controllers
         public async Task<IActionResult> Edit(Ogrenci? model)
         {
 
-            Ogrenci? selectedStudent = await _context.Ogrenciler.FirstOrDefaultAsync(s => s.OgrenciId == model.OgrenciId);
 
-            if (selectedStudent == null)
-            {
-                return NotFound();
-            }
-
-            model.OgrenciAd = selectedStudent.OgrenciAd;
-            model.OgrenciSoyad = selectedStudent.OgrenciSoyad;
-            model.Eposta = selectedStudent.Eposta;
-            model.Telefon = selectedStudent.Telefon;
-
+            _context.Ogrenciler.Update(model);
             await _context.SaveChangesAsync();
-            return RedirectToAction("Index", "Ogrenci");
+            return RedirectToAction("Index");
         }
+
+
     }
 }

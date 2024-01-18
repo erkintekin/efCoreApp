@@ -134,3 +134,4 @@ C:\Users\user\Desktop\Fullstack\efCoreApp\obj\Debug\net7.0\refint\efCoreApp.dll
 C:\Users\user\Desktop\Fullstack\efCoreApp\obj\Debug\net7.0\efCoreApp.pdb
 C:\Users\user\Desktop\Fullstack\efCoreApp\obj\Debug\net7.0\efCoreApp.genruntimeconfig.cache
 C:\Users\user\Desktop\Fullstack\efCoreApp\obj\Debug\net7.0\ref\efCoreApp.dll
+C:\Users\user\Desktop\Fullstack\efCoreApp\obj\Debug\net7.0\efCoreApp.sourcelink.json
